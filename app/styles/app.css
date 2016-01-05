@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 28px;
+}
+
+.logo {
+  margin: 200px auto 40px auto;
+  width: 400px;
+  height: 72px;
+  background: url(https://s3.amazonaws.com/code-corps/icons/code-corps.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+        .logo {
+          background: url(https://s3.amazonaws.com/code-corps/icons/code-corps@2x.png);
+          background-size: 400px 72px;
+        }
+}
+
+
+.email-signup {
+  margin: 40px auto 0 auto;
+  width: 300px;
+}
+
+input[type="email"] {
+  float: left;
+  border: 1px solid #333;
+  color: #333;
+  width: 258px;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+button, input[type="button"] {
+  float: left;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  background: #75C5DF;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 40px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  background-image: -webkit-linear-gradient(bottom left, #07a8fb, #75C5DF);
+  background-image: -moz-linear-gradient(bottom left, #07a8fb, #75C5DF);
+  background-image: -ms-linear-gradient(bottom left, #07a8fb, #75C5DF);
+  background-image: -o-linear-gradient(bottom left, #07a8fb, #75C5DF);
+  background-image: linear-gradient(to top right, #07a8fb, #75C5DF);
+  transition: background-image 0.5s ease;
+}
