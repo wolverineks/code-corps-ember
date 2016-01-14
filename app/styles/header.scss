@@ -1,0 +1,31 @@
+.menu {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: solid 1px #D9D9DE;
+}
+
+.logo {
+  margin: 0;
+  float: left;
+}
+
+.cc-logo {
+  text-indent: -9999px;
+  display: inline-block;
+  height: 54px;
+}
+
+.nav-links {
+  li {
+    font-size: 14px;
+    a {
+      padding: 20px 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 700;
+      &:hover {
+        background: #EEE;
+      }
+    }
+  }
+}

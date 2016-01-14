@@ -1,11 +1,32 @@
-<div class="menu container">
-  {{#if session.isAuthenticated}}
-    <a class="logout" {{action 'invalidateSession'}}>Logout</a>
-  {{else}}
-    {{#link-to 'login' class="login"}}Login{{/link-to}}
-    {{#link-to 'signup' class="signup"}}Sign up{{/link-to}}
-  {{/if}}
-</div>
+<header class="menu">
+  <div class="container">
+    <h1 class="logo">
+      {{#link-to 'index' class="cc-logo"}}Code Corps{{/link-to}}
+    </h1>
+    <nav class="left" role="navigation">
+      <ul class="nav-links">
+        <li>
+          {{#link-to 'index'}}Projects{{/link-to}}
+        </li>
+      </ul>
+    </nav>
+    <nav class="right" role="navigation">
+      <ul class="nav-links">
+
+    {{#if session.isAuthenticated}}
+      <button class="logout" {{action 'invalidateSession'}}>Logout</button>
+    {{else}}
+      <li>
+        {{#link-to 'signup' class="signup button"}}Sign up{{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'login' class="login button"}}Sign in{{/link-to}}
+      </li>
+    {{/if}}
+  </ul>
+    </nav>
+  </div>
+</header>
 <div class="main container">
   {{outlet}}
 </div>
