@@ -184,32 +184,6 @@ test('it selects the skill when clicking it', function(assert) {
   assert.equal(this.$('.dropdown-menu li').length, 0);
 });
 
-test('it only returns first five results', function(assert) {
-  assert.expect(1);
-
-  let store = Ember.Service.extend({
-    query () {
-      return Ember.RSVP.resolve([
-        Ember.Object.create({ title: "Ruby1" }),
-        Ember.Object.create({ title: "Ruby2" }),
-        Ember.Object.create({ title: "Ruby3" }),
-        Ember.Object.create({ title: "Ruby4" }),
-        Ember.Object.create({ title: "Ruby5" }),
-        Ember.Object.create({ title: "Ruby6" })
-      ]);
-    }
-  });
-
-  this.register('service:store', store);
-
-  this.render(hbs`{{user-skills-input query=query}}`);
-
-  this.$('input').focus();
-  this.set('query', 'ru');
-
-  assert.equal(this.$('.dropdown-menu li').length, 5);
-});
-
 test('it does nothing when there are no results', function(assert) {
   assert.expect(1);
 
